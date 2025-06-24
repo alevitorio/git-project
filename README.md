@@ -75,6 +75,7 @@ git push origin develop
 ## 🔥 Merge ou Rebase?
 
 ✔️ **Merge:** Junta sua branch na develop com um commit de merge. Simples, rápido e seguro.
+
 ✔️ **Rebase:** Deixa o histórico mais limpo e linear. Atualiza sua branch como se ela tivesse sido criada após as mudanças mais recentes da develop. Requer atenção em conflitos.
 
 **Na dúvida? Use merge.**
