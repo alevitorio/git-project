@@ -109,7 +109,7 @@ Adicione imagens mostrando o funcionamento da feature.
 
 ## 🗺️ **Diagrama do Fluxo de Branches**
 
-
+```markdown
 +-------------------------+
 |       feature/X         |
 +-------------------------+
@@ -122,4 +122,4 @@ Adicione imagens mostrando o funcionamento da feature.
 |          main           |
 | (Deploy GitHub Pages)   |
 +-------------------------+
-
+```
