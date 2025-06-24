@@ -1,16 +1,3 @@
-Perfeito, Alessandro! 🚀
-
-Então temos:
-🔗 **Repositório:** `https://github.com/alevitorio/git-project`
-👤 **Usuário:** `alevitorio`
-
-Agora vou gerar tudo personalizado com essas informações.
-
----
-
-## 📝 **README.md — Projeto Escola | ETEC Irmã Augustina**
-
-````markdown
 # 🚀 Projeto Escola - ETEC Irmã Augustina
 
 ## 🎯 Objetivo
@@ -101,7 +88,7 @@ git merge develop
 ---
 
 ## 📝 **Template de Pull Request**
-```markdown
+
 ## ✨ Descrição da Feature
 Descreva de forma clara o que foi desenvolvido.
 
