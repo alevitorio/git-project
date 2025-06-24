@@ -108,30 +108,6 @@ git push origin develop
 
 ---
 
-## 💡 Desenvolvido pelos alunos da **ETEC Irmã Augustina**, orientados pelo professor **Alessandro — AleDev 🚀**
-
-````
-
----
-
-## 📝 **Template de Pull Request (para PR da `develop` para `main`)**
-```markdown
-## ✨ O que foi feito:
-- Descrever brevemente o que está sendo entregue para produção.
-
-## ✅ Checklist:
-- [ ] Testado e funcionando localmente
-- [ ] Todos os arquivos estão corretos
-- [ ] A develop está funcionando sem erros
-
-## 🚀 Observações:
-- Descreva qualquer ponto importante
-
----
-````
-
----
-
 ## 🗺️ **Diagrama do Fluxo de Branches — Atualizado**
 
 ```plaintext
