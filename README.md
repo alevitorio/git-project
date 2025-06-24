@@ -1,16 +1,17 @@
+````markdown
 # 🚀 Projeto Escola - ETEC Irmã Augustina
 
 ## 🎯 Objetivo
-Desenvolver uma página web em grupo, aplicando conceitos de HTML, CSS, JavaScript e GitHub colaborativo, utilizando um fluxo de trabalho muito próximo do mercado.
+Desenvolver uma página web em grupo, aplicando conceitos de HTML, CSS, JavaScript e Git colaborativo, utilizando um fluxo de trabalho muito próximo do mercado.
 
 ---
 
 ## 🌳 Branches principais:
 - `main` → Produção e Deploy (**GitHub Pages**)
-- `develop` → Integração das features
+- `develop` → Integração das features (todos trabalham diretamente nela)
 
 ### 🚧 Branches de desenvolvimento:
-- `feature/nome-da-feature` → Cada grupo cria sua própria branch para desenvolver uma parte do site.
+- `feature/nome-da-feature` → Cada grupo cria sua própria branch local para desenvolver sua parte.
 
 ---
 
@@ -21,7 +22,7 @@ Desenvolver uma página web em grupo, aplicando conceitos de HTML, CSS, JavaScri
 git clone https://github.com/alevitorio/git-project.git
 ````
 
-2️⃣ **Criar sua branch de feature:**
+2️⃣ **Criar sua branch de feature localmente (opcional):**
 
 ```bash
 git checkout -b feature/nome-da-feature
@@ -29,31 +30,7 @@ git checkout -b feature/nome-da-feature
 
 3️⃣ **Desenvolver sua parte.**
 
-4️⃣ **Fazer commit e push na sua branch:**
-
-```bash
-git add .
-git commit -m "feat: adiciona nome-da-feature"
-git push origin feature/nome-da-feature
-```
-
-5️⃣ **Abrir Pull Request para a branch `develop`:**
-
-* Base: `develop`
-* Compare: `feature/nome-da-feature`
-
-6️⃣ Quando tudo estiver funcionando, fazemos um Pull Request de `develop` para `main`.
-
-7️⃣ A branch `main` faz o deploy automático no **GitHub Pages**.
-
----
-
-## 🛑 Regras importantes:
-
-* ❌ Nunca fazer push direto na `main`.
-* ❌ De preferência, também não fazer push direto na `develop` (usar Pull Request).
-* ✅ Sempre trabalhar na sua própria branch.
-* ✅ Antes de abrir um Pull Request, sincronizar sua branch:
+4️⃣ **Sincronizar com a develop (caso precise):**
 
 ```bash
 git checkout develop
@@ -62,16 +39,65 @@ git checkout feature/nome-da-feature
 git merge develop
 ```
 
+Ou:
+
+```bash
+git rebase develop
+```
+
+5️⃣ **Integrar seu trabalho na `develop`:**
+
+* Pode fazer **merge** da sua feature na `develop`:
+
+```bash
+git checkout develop
+git merge feature/nome-da-feature
+git push origin develop
+```
+
+Ou:
+
+* Pode aplicar **rebase** e depois push:
+
+```bash
+git checkout develop
+git pull
+git rebase feature/nome-da-feature
+git push origin develop
+```
+
+6️⃣ Quando a `develop` estiver estável e finalizada, abrir um **Pull Request da `develop` para `main`**.
+
+7️⃣ A `main` faz o deploy no **GitHub Pages**.
+
+---
+
+## 🔥 Merge ou Rebase?
+
+✔️ **Merge:** Junta sua branch na develop com um commit de merge. Simples, rápido e seguro.
+✔️ **Rebase:** Deixa o histórico mais limpo e linear. Atualiza sua branch como se ela tivesse sido criada após as mudanças mais recentes da develop. Requer atenção em conflitos.
+
+**Na dúvida? Use merge.**
+
+---
+
+## 🛑 Regras importantes:
+
+* ❌ Nunca fazer push direto na `main`.
+* ✅ Na `develop` é permitido push, merge e rebase.
+* ✅ Sempre trabalhar em sua própria branch local antes de integrar.
+* ✅ Resolver conflitos se aparecerem durante merge ou rebase.
+* ✅ O único Pull Request acontece de `develop` para `main`.
+
 ---
 
 ## 🔥 Checklist dos alunos:
 
 * [ ] Clonar o repositório
-* [ ] Criar uma branch de feature
-* [ ] Fazer commits claros e objetivos
-* [ ] Push na sua branch
-* [ ] Abrir Pull Request para `develop`
-* [ ] Participar do merge final para `main`
+* [ ] Criar uma branch local de feature (opcional)
+* [ ] Desenvolver sua parte
+* [ ] Fazer push na `develop` (via merge ou rebase)
+* [ ] Participar do Pull Request de `develop` para `main`
 
 ---
 
@@ -83,43 +109,41 @@ git merge develop
 
 ## 💡 Desenvolvido pelos alunos da **ETEC Irmã Augustina**, orientados pelo professor **Alessandro — AleDev 🚀**
 
-
-
----
-
-## 📝 **Template de Pull Request**
-
-## ✨ Descrição da Feature
-Descreva de forma clara o que foi desenvolvido.
-
-## 🔗 Relacionado a:
-- [ ] Nenhuma Issue
-- [ ] Issue #Número (se tiver)
-
-## ✅ Checklist antes do merge:
-- [ ] Código testado localmente
-- [ ] Segue o padrão de pastas e arquivos
-- [ ] Sem conflitos com a branch develop
-- [ ] Commit bem descrito
-
-## 📸 Screenshot (se aplicável):
-Adicione imagens mostrando o funcionamento da feature.
+````
 
 ---
 
-## 🗺️ **Diagrama do Fluxo de Branches**
-
+## 📝 **Template de Pull Request (para PR da `develop` para `main`)**
 ```markdown
+## ✨ O que foi feito:
+- Descrever brevemente o que está sendo entregue para produção.
+
+## ✅ Checklist:
+- [ ] Testado e funcionando localmente
+- [ ] Todos os arquivos estão corretos
+- [ ] A develop está funcionando sem erros
+
+## 🚀 Observações:
+- Descreva qualquer ponto importante
+
+---
+````
+
+---
+
+## 🗺️ **Diagrama do Fluxo de Branches — Atualizado**
+
+```plaintext
 +-------------------------+
-|       feature/X         |
+|  feature/nome-da-feature| (local)
++-------------------------+
+           ↓  merge ou rebase (direto)
++-------------------------+
+|        develop          | (Push livre)
 +-------------------------+
            ↓  Pull Request
 +-------------------------+
-|        develop          |
-+-------------------------+
-           ↓  Pull Request
-+-------------------------+
-|          main           |
-| (Deploy GitHub Pages)   |
+|          main           | (Deploy GitHub Pages)
 +-------------------------+
 ```
+
