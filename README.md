@@ -83,7 +83,7 @@ git merge develop
 
 ## 💡 Desenvolvido pelos alunos da **ETEC Irmã Augustina**, orientados pelo professor **Alessandro — AleDev 🚀**
 
-````
+
 
 ---
 
@@ -106,13 +106,10 @@ Descreva de forma clara o que foi desenvolvido.
 Adicione imagens mostrando o funcionamento da feature.
 
 ---
-````
-
----
 
 ## 🗺️ **Diagrama do Fluxo de Branches**
 
-```plaintext
+
 +-------------------------+
 |       feature/X         |
 +-------------------------+
@@ -125,4 +122,4 @@ Adicione imagens mostrando o funcionamento da feature.
 |          main           |
 | (Deploy GitHub Pages)   |
 +-------------------------+
-```
+
